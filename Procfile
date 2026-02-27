@@ -1,1 +1,1 @@
-web: gunicorn css_projec.wsgi
+web: gunicorn college_project.wsgi
