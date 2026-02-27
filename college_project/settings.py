@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-c=h8jdsux)3vfkeo@0e31f&y&@c=d+%_k-a(&=et)-8*+(d7sd
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -117,3 +117,10 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 STATICFILES_DIRS=[BASE_DIR/"static"]
+MIDDLEWARE = [
+    'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
+    ...
+]
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
